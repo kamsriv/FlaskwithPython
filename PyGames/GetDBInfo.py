@@ -1,7 +1,8 @@
 import types
 import sys
 import pyodbc
-class GetDBInfo():
+
+class GetDBInfo(object):
     """description of class"""
     def __init__(self, constr=""):
         self.__conValues = {"Provider":"{ODBC Driver 17 for SQL Server}",

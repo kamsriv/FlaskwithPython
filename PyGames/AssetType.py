@@ -1,10 +1,10 @@
 import typing
 import GetDBInfo
-from flask import Flask
-from flask_restful import Resource, Api
+#from flask import Flask
 
-app = Flask(__name__)
-api = Api(app)
+#from flask_restful import Resource, Api
+#app = Flask(__name__)
+#api = Api(app)
 
 ##Async programming https://docs.microsoft.com/en-us/archive/msdn-magazine/2014/october/async-programming-introduction-to-async-await-on-asp-net
 class AssetTypeDTO():

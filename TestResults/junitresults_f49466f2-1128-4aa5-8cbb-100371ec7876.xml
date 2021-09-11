@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite errors="0" failures="2" hostname="HYD6113" name="pytest" skipped="0" tests="13" time="3.059" timestamp="2021-09-09T20:47:41.411575"><testcase classname="PyGames.test_1.Test_AssetTypeUpdate" file="PyGames\test_1.py" line="39" name="test_procUpdate" time="0.447"><failure message="AssertionError: None != 1">self = &lt;test_1.Test_AssetTypeUpdate testMethod=test_procUpdate&gt;
+
+    def test_procUpdate(self):
+        dbObj = AssetType.AssetType("Meraki","Hardware")
+        dbObj.AssetTypeID = 12
+        dbObj.IsActive = 0
+&gt;       self.assertEqual(dbObj.updateAssetType(),1)
+E       AssertionError: None != 1
+
+PyGames\test_1.py:44: AssertionError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+('42000', '[42000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]You are trying to update an inactive Asset Type (50000) (SQLExecDirectW)')
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_CreateAsset" file="PyGames\test_1.py" line="67" name="test_createAsset" time="0.035"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_CreateAssetType" file="PyGames\test_1.py" line="34" name="test_procCall" time="0.019"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_CreateInvoice" file="PyGames\test_1.py" line="56" name="test_createInvoice" time="0.058"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_GetAsset" file="PyGames\test_1.py" line="72" name="test_getAsset" time="0.014"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_GetAssetTypes" file="PyGames\test_1.py" line="46" name="test_getAssetTypes" time="0.006"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_GetAssetTypes" file="PyGames\test_1.py" line="50" name="test_getAssetTypes_1" time="0.906"><failure message="AssertionError: 13 != 10">self = &lt;test_1.Test_GetAssetTypes testMethod=test_getAssetTypes_1&gt;
+
+    def test_getAssetTypes_1(self):
+        dbObj = AssetType.AssetType()
+        result = dbObj.getAssetTypes()
+&gt;       self.assertEqual(len(result),10)
+E       AssertionError: 13 != 10
+
+PyGames\test_1.py:54: AssertionError</failure><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_GetAvailableRows" file="PyGames\test_1.py" line="29" name="test_rowsAvail" time="0.039"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+AssetType
+Attachments
+Invoice
+Asset
+AssetLog
+tblUserRegistration
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_pyGamesFact" file="PyGames\test_1.py" line="11" name="test_fibo" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_pyGamesFact" file="PyGames\test_1.py" line="14" name="test_revNum" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_pyGamesFib" file="PyGames\test_1.py" line="20" name="test_Ineq" time="0.004"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_pyGamesFib" file="PyGames\test_1.py" line="18" name="test_fact" time="0.003"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase><testcase classname="PyGames.test_1.Test_SqlConnection" file="PyGames\test_1.py" line="24" name="test_sqlConn" time="0.006"><system-out>--------------------------------- Captured Log ---------------------------------
+
+--------------------------------- Captured Out ---------------------------------
+
+</system-out><system-err>--------------------------------- Captured Err ---------------------------------
+
+</system-err></testcase></testsuite></testsuites>

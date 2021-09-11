@@ -1,17 +1,20 @@
+#from PyGames.AssetType 
 import AssetType
 import Assets
 import Invoice
+import utility
 import typing
 from flask import Flask,request
 from marshmallow_jsonapi.flask import Schema
 from marshmallow_jsonapi import fields
-from flask_rest_jsonapi import Api
+#from flask_rest_jsonapi import Api
 
-
-##Enabling documentation using Swagger 
+#enabling swagger.
+##https://www.aurigait.com/blog/api-documentation-with-swagger-in-flask/
 #https://pypi.org/project/flask-swagger/
 
 app = Flask(__name__)
+app.json_encoder = utility.MyJSONEncoder
 
 class class1(object):
     
@@ -50,17 +53,19 @@ class class1(object):
         return {'results':str(dbObj.updateAssetType()) + " assettype updated successfully"}
     
     #Invoices
-    @app.route("/invoice",defaults={'invId':None})
-    @app.route("/invoice/<invId>",methods=['Get'])
-    def GetInvoices(invId=None):
+    @app.route("/invoice")
+    #@app.route("/invoice/<invId>",methods=['Get'])
+    def GetInvoices():
+        invId = request.args.get('invId')
         if invId is not None:
             dbObj = Invoice.Invoice({"INVOICENUMBER":invId})
             return {'result':dbObj.GetInvoice()}
         else:
             return {'result':'invoice id is'+str(invId)}
 
-api = Api()
+#api = Api()
 #api.route(class1.testAPI, 'assets', '/assets')
 
 if __name__ == '__main__':
     app.run()
+    
