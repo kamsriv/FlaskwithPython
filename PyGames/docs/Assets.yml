@@ -1,0 +1,7 @@
+summary: "Asset Listing"
+description: "To get all the available IT Assets"
+produces:
+- "application/json"
+responses:
+  400:
+    description:"There were no assets available to list"

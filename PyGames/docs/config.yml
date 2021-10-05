@@ -1,0 +1,12 @@
+connectionstr:
+  server: "localhost\\sqlexpress"
+  database: "AssetManager"
+  username: "sa"
+  password: "Ryan@123"
+  dialect: "mssql+pyodbc"
+  driver: "SQL Server"
+temppath:
+  location: "C:\\temp"
+AppInfo:
+    Name: "My Asset Management application"
+    Version: "0.0.1"

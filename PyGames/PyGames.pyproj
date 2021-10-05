@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>4f3b2755-25a2-47b0-83b6-1f6a485feb46</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>PyGames.py</StartupFile>
+    <StartupFile>App.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -13,7 +13,7 @@
     <RootNamespace>PyGames</RootNamespace>
     <TestFramework>unittest</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
-    <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <UnitTestRootDirectory>./Tests</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -24,35 +24,89 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets.py">
+    <Compile Include="DataAccess\AppConfig.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AssetType.py">
+    <Compile Include="DataAccess\__init__.py" />
+    <Compile Include="DO\AssetTypesDO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DO\AssetsDO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DO\AttachmentsDO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DO\InvoiceDO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DO\__init__.py" />
+    <Compile Include="DTO\AssetsDTO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\AssetTypesDTO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\AttachmentsDTO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\ConfigDTO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\InvoiceDTO.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DTO\__init__.py" />
+    <Compile Include="BusinessLogic\Assets.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLogic\AssetType.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="App.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Invoice.py" />
-    <Compile Include="Attachments.py">
+    <Compile Include="BusinessLogic\Invoice.py" />
+    <Compile Include="BusinessLogic\Attachments.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GetDBInfo.py">
+    <Compile Include="DataAccess\GetDBInfo.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="inEqual.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BusinessLogic\__init__.py" />
+    <Compile Include="Tests\tests_assetmgr.py" />
+    <Compile Include="Tests\tests_unit.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tests\__init__.py" />
+    <Compile Include="utility\jsonConvert.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="utility\UserNotification.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="utility\__init__.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="PyGames.py" />
-    <Compile Include="test_1.py">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="docs\" />
+    <Folder Include="DO\" />
+    <Folder Include="BusinessLogic\" />
+    <Folder Include="DataAccess\" />
+    <Folder Include="DTO\" />
+    <Folder Include="Tests\" />
     <Folder Include="utility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\Assets.yml" />
+    <Content Include="docs\config.yml">
+      <SubType>Code</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
